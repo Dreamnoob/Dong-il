@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="theme-color" content="#111111">
+	<meta name="robots" content="index, follow, noodp">
+	<meta name="googlebot" content="index, follow">
+	<meta name="google" content="notranslate">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="keywords" content="">
+	<meta name="description" content="dong__il public site">
+
+	<title>Page</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<!-- <svg class="svg">
+    <use xlink:href="img/sprite.svg#telega"></use>
+</svg> -->
+
+<body>
+	<div class="page">
+		@include('partials/header.html')
+
+		<main class="main">
+
+
+			<section class="banner">
+				<div class="banner__inner">
+					<img class="banner__img" src="img/banner.jpg" alt="">
+					<div class="banner__content">
+						<p class="banner__text">
+							<span class="">DONG IL Entertainment</span> крупнейшая в Корее компания
+							по организации эстрадных представлений
+							с участием иностранных артистов
+						</p>
+						<button onclick="document.location='form.html'" class="btn btn--banner">Работай с нами</button>
+					</div>
+				</div>
+			</section>
+
+			<section class="about" id="aboutSec">
+				<div class="about__inner">
+					<h2 id="about" class="about__title">О нас</h2>
+					<p class="about__text">
+						<span>DONG IL ENTERTAINMENT</span> - это компания с 50-летней историей. Основана как поставщик
+						товаров
+						военного
+						назначення, привлекающая местных и иностранных артистов для выступления в клубе военной части
+						США №8. Эта
+						компания одна из основоположников шоу-бизнеса в Корее.
+						В настоящее время компания занимается проведением различных мероприяти и рекламных акций.
+						Организацией
+						выступлений иностранных артистов и звезд шоу-бизнеса в курортно-развлекательном комплексе
+						Эверленд, парке
+						атракционов Иволд, а также в прибрежно-туристическом комплексе Инчона на теплоходе Ханганг
+						Юрамсон по реке
+						Ханганг и в первоклассных отелях страны.
+						В нашей компании числится около 200 артистов и талантов из зарубежных стран.
+					</p>
+				</div>
+			</section>
+
+			<section class="history">
+				<div class="history__inner">
+					<h2 class="history__title">Наша история</h2>
+
+					<ul class="history__list">
+						<li class="history__item">
+							<div class="history__date">Ноябрь <span>1964</span></div>
+							<div class="history__text">
+								<p>Проведение выступлений на территории клуба военной части
+									США №8</p>
+								<p>В результате чего командиры частей каждого региона
+									вручили нам
+									награды</p>
+							</div>
+						</li>
+						<li class="history__item">
+							<div class="history__date">Июль <span>1986</span></div>
+							<div class="history__text">
+								Участие иностранных артистов на мероприятии во время Азиатских игр 1986
+							</div>
+						</li>
+						<li class="history__item">
+							<div class="history__date">Июль <span>1988</span></div>
+							<div class="history__text">
+								Участие иностранных артистов на мероприятии во время Олимпийских игр 1988
+							</div>
+						</li>
+						<li class="history__item">
+							<div class="history__date"><span>1995</span> по настоящее время</div>
+							<div class="history__text">
+								Проведение мероприятий и выступлений в курортно-развлекательном комплексе Эверленд
+							</div>
+						</li>
+						<li class="history__item">
+							<div class="history__date"><span>1992</span> по настоящее время</div>
+							<div class="history__text">
+								Проведение мероприятий и выступлений в парке атракционов Иволд
+							</div>
+						</li>
+						<li class="history__item">
+							<div class="history__date">Июнь <span>2002</span></div>
+							<div class="history__text">
+								Участие на мероприятии во время корейско-японского чемпионата по футболу
+							</div>
+						</li>
+					</ul>
+					<div class="history__bottom">
+						<div class="history__text">
+							<p>Организация мероприятий и выступлений в первоклассных отелях
+								страны, на теплоходах Ханганд Юрамсон по реке Ханганг.</p>
+							<p>Выступлений в ресторанах театра, других мероприятий и приемов.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="banner">
+				<div class="banner__inner banner__inner--large">
+					<img class="banner__img" src="img/banner-2.jpg" alt="">
+					<div class="banner__content banner__content--center">
+						<p class="banner__text banner__text--center">
+							Мы ищем энергичных артистов нового поколения
+						</p>
+						<button onclick="document.location='form.html'" class="btn">Работай с нами</button>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		@include('partials/footer.html')
+	</div>
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

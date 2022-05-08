@@ -1,0 +1,136 @@
+.history {
+    background-color: #fff;
+}
+
+.history__inner {
+    max-width: 113rem;
+    height: auto;
+    padding: 13.5rem 3.2rem 14.7rem;
+    margin: 0 auto;
+}
+
+.history__title {
+    margin-bottom: 4.4rem;
+
+    font-size: 32px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #000;
+}
+
+.history__list {
+    margin-left: 1.4rem;
+    padding-bottom: 3.1rem;
+
+    border-left: 2px solid #FFB1F3;
+}
+
+.history__item {
+    padding-left: 5.9rem;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        border-radius: 100%;
+        background-color: #FFB1F3;
+
+        position: absolute;
+        top: 0;
+        left: -13.5px;
+    }
+}
+
+.history__bottom {
+    margin-top: -2.5rem;
+    margin-left: 1.4rem;
+    padding-left: 5.9rem;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        display: block;
+        width: 2.4rem;
+        height: 2.4rem;
+
+        border-radius: 100%;
+        background-color: #FFB1F3;
+
+        position: absolute;
+        top: 5px;
+        left: -11.4px;
+    }
+}
+
+.history__date {
+    margin-bottom: .6rem;
+
+    font-size: 24px;
+    line-height: 32px;
+    color: #000;
+    font-weight: 300;
+
+    & span {
+        font-weight: 400;
+    }
+}
+
+.history__text {
+    max-width: 67rem;
+    padding-bottom: 2.6rem;
+
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 300;
+    opacity: .7;
+    color: #000;
+}
+
+@media (max-width:1450px) {
+    .history__inner {
+        padding: 4.2rem 3.2rem 7.2rem
+    }
+}
+
+@media (max-width:425px) {
+    .history__title {
+        margin-bottom: 1.3rem;
+        font-size: 16px;
+        line-height: 32px
+    }
+
+    .history__inner {
+        padding: 2.7rem 1.4rem 3.7rem
+    }
+
+    .history__item {
+        padding-left: 2.6rem
+    }
+
+    .history__date {
+        margin-bottom: .8rem;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+        font-weight: 500
+    }
+
+    .history__date span {
+        font-weight: 500
+    }
+
+    .history__text {
+        margin-bottom: 1.6rem;
+        padding-bottom: 0;
+        font-size: 1.6rem;
+        line-height: 1.6rem
+    }
+
+    .history__bottom {
+        padding-left: 2.6rem
+    }
+}

@@ -1,0 +1,18 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    position: relative;
+    
+    overflow-x: hidden;
+    background-color: #000;
+
+    &.scroll-hide {
+        height: calc(var(--vh, 1vh) * 100);
+	}
+}
+
+.page-form {
+    background-color: #fff;
+}
