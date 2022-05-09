@@ -1,4 +1,4 @@
-const swiper = new Swiper('.mySwiper', {
+/* const swiper = new Swiper('.mySwiper', {
     cssMode: true,
     loop: true,
     navigation: {
@@ -9,4 +9,4 @@ const swiper = new Swiper('.mySwiper', {
     keyboard: true,
     observer: true,
     observeParents: true
-});
+}); */

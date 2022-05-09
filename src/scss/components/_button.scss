@@ -1,24 +1,92 @@
 .btn {
-    width: 35.8rem;
-    height: 6.4rem;
+    display: block;
+    width: 30rem;
+    height: 6rem;
 
-    background-color: #FFB1F3;
-    opacity: .8;
-    border-radius: .8rem;
-    border: none;
-    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #FFB1F3;
+    transition: 0.7s linear;
 
-    font-size: 2rem;
-    line-height: 6.4rem;
-    color: #222;
-    font-weight: 400;
-    white-space: nowrap;
-    text-align: center;
+    position: relative;
 
-    transition: .2s linear;
+    span {
+        display: block;
+
+        font-size: 2rem;
+        line-height: 6.4rem;
+        color: #222;
+        font-weight: 400;
+        white-space: nowrap;
+        text-align: center;
+
+        transition: 0.5s linear;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        // background: #000;
+        background: #FFB1F3;
+
+        cursor: pointer;
+        -webkit-mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+        mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+        -webkit-mask-size: 7100% 100%;
+        mask-size: 7100% 100%;
+
+        -webkit-animation: ani2 0.7s steps(70) forwards;
+        animation: ani2 0.7s steps(70) forwards;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &::after {
+        content: '';
+        // background: #000;
+        background: #000;
+
+        cursor: pointer;
+        -webkit-mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+        mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
+        -webkit-mask-size: 7100% 100%;
+        mask-size: 7100% 100%;
+
+        -webkit-animation: ani 0.7s steps(70) forwards;
+        animation: ani 0.7s steps(70) forwards;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
 
     &:hover {
-        opacity: 1;
+        border-color: #000;
+
+        &::before {
+            -webkit-animation: ani 0.7s steps(70) forwards;
+            animation: ani 0.7s steps(70) forwards;
+        }
+
+        &::after {
+            -webkit-animation: ani2 0.7s steps(70) forwards;
+            animation: ani2 0.7s steps(70) forwards;
+        }
+
+        span {
+            color: #fff;
+        }
     }
 
     &--banner {
@@ -28,12 +96,37 @@
     }
 }
 
+@keyframes ani {
+    from {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+
+    to {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+}
+
+@keyframes ani2 {
+    from {
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+
+    to {
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
 @media (max-width:1720px) {
     .btn {
         width: 25.8rem;
         height: 5.4rem;
         line-height: 5.4rem
     }
+
     .btn--banner {
         right: 4rem;
         bottom: 2.4rem
@@ -56,6 +149,7 @@
         font-size: 1.6rem;
         line-height: 4.8rem
     }
+
     .btn--banner {
         position: static;
         margin: 0 auto

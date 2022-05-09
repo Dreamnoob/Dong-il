@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll('.tabs__item');
+/* const tabs = document.querySelectorAll('.tabs__item');
 const tabsContent = document.querySelectorAll('.content__item');
 const tabParent = document.querySelector('.tabs__list');
 const contentList = document.querySelectorAll('.content__list');
@@ -68,3 +68,4 @@ window.addEventListener('resize', () => {
 });
 
 
+ */
