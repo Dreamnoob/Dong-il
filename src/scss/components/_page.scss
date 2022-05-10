@@ -2,15 +2,24 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    
+
     position: relative;
-    
+
     overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
     background-color: #000;
 
     &.scroll-hide {
         height: calc(var(--vh, 1vh) * 100);
-	}
+    }
 }
 
 .page-form {

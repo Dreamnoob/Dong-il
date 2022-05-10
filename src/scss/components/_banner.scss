@@ -9,6 +9,15 @@
 
     overflow: hidden;
 
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+
     position: relative;
 
     &--large {
@@ -20,7 +29,7 @@
     }
 }
 
-.banner__img{
+.banner__img {
     display: block;
     height: 100%;
     width: 100%;
@@ -31,7 +40,7 @@
 
     canvas {
         display: block;
-        width: 100%;
+        width: 100% !important;
         height: 100%;
     }
 }
@@ -45,7 +54,9 @@
 }
 
 .banner__content {
-    padding: 33px 64px 56px 67px;
+    display: flex;
+    align-items: center;
+    padding: 33px 64px;
 
     background-color: rgba(0, 0, 0, 0.4);
 
@@ -56,13 +67,14 @@
 
     &--center {
         flex-direction: column;
-        align-items: center;
         padding: 1.3rem 1.5rem 3.2rem 2.4rem;
     }
 }
 
 .banner__text {
-    max-width: 1210px;
+    max-width: 1230px;
+    margin-right: auto;
+    padding-right: 20px;
 
     font-size: 32px;
     line-height: 40px;

@@ -4,9 +4,11 @@
     height: 6rem;
 
     overflow: hidden;
-    border-radius: 8px;
-    border: 1px solid #FFB1F3;
-    transition: 0.7s linear;
+    // border-radius: 8px;
+    // border: 1px solid #FFB1F3;
+    // transition: 0.7s linear;
+    background: #FFB1F3;
+    // transition: color 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 
     position: relative;
 
@@ -20,7 +22,8 @@
         white-space: nowrap;
         text-align: center;
 
-        transition: 0.5s linear;
+        // transition: 0.5s linear;
+        transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 
         position: absolute;
         top: 50%;
@@ -31,57 +34,44 @@
 
     &::before {
         content: '';
-        // background: #000;
-        background: #FFB1F3;
+        background: #000;
+        mix-blend-mode: darken;
 
-        cursor: pointer;
-        -webkit-mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
-        mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
-        -webkit-mask-size: 7100% 100%;
-        mask-size: 7100% 100%;
-
-        -webkit-animation: ani2 0.7s steps(70) forwards;
-        animation: ani2 0.7s steps(70) forwards;
+        transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        z-index: 1;
+
+        transform: translateX(-100%);
     }
 
     &::after {
         content: '';
-        // background: #000;
         background: #000;
-
-        cursor: pointer;
-        -webkit-mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
-        mask: url(https://raw.githubusercontent.com/pizza3/asset/master/natureSmaller.png);
-        -webkit-mask-size: 7100% 100%;
-        mask-size: 7100% 100%;
-
-        -webkit-animation: ani 0.7s steps(70) forwards;
-        animation: ani 0.7s steps(70) forwards;
+        mix-blend-mode: darken;
+        transition: all 0.5s cubic-bezier(0.42, 0, 0.58, 1);
 
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        z-index: 1;
+
+        transform: translateX(100%);
     }
 
     &:hover {
-        border-color: #000;
-
         &::before {
-            -webkit-animation: ani 0.7s steps(70) forwards;
-            animation: ani 0.7s steps(70) forwards;
+            transform: translateX(0);
         }
-
+        
         &::after {
-            -webkit-animation: ani2 0.7s steps(70) forwards;
-            animation: ani2 0.7s steps(70) forwards;
+            transform: translateX(0);
         }
 
         span {
@@ -89,35 +79,11 @@
         }
     }
 
-    &--banner {
+  /*   &--banner {
         position: absolute;
         right: 64px;
         bottom: 40px;
-    }
-}
-
-@keyframes ani {
-    from {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
-
-    to {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
-}
-
-@keyframes ani2 {
-    from {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
-
-    to {
-        -webkit-mask-position: 0 0;
-        mask-position: 0 0;
-    }
+    } */
 }
 
 @media (max-width:1720px) {
